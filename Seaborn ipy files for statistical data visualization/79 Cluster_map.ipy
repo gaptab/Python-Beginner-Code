@@ -1,0 +1,39 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+iris=sns.load_dataset("iris")
+print(iris.head())
+species=iris.pop("species")
+sns.clustermap(iris)
+
+#diffetent similarity metric
+sns.clustermap(iris,metric='correlation')
+
+#different cluster method
+
+sns.clustermap(iris,method='single')
+
+#different colormap
+
+sns.clustermap(iris,cmap='mako',robust=True)
+
+#change the size of the figure
+
+sns.clustermap(iris,figsize=(6,7))
+
+# plot one of the axes in its original organization
+sns.clustermap(iris,col_cluster=False)
+
+#add colored label
+lut=dict(zip(species.unique(),'rbg'))
+row_colors=species.map(lut)
+g=sns.clustermap(iris,row_colors=row_colors)
+
+# standardize the data within the columns
+sns.clustermap(iris,standard_scale=1)
+
+#normalize the data within the rows
+sns.clustermap(iris,z_score=0)

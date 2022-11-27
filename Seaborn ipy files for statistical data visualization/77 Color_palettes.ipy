@@ -1,0 +1,29 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+sns.set(rc={"figure.figsize":(6,6)})
+
+current_palette=sns.color_palette()
+sns.palplot(current_palette)
+
+sns.palplot(sns.color_palette("hls",8))
+
+sns.palplot(sns.color_palette("husl",9))
+
+sample_color=["windows blue","amber","greyish","faded green","dusty purple","pale red","medium green","denim blue"]
+sns.palplot(sns.xkcd_palette(sample_color))
+
+sns.palplot(sns.color_palette("cubehelix",8))
+# default seaborn cubehelix version
+sns.palplot(sns.cubehelix_palette(8))
+
+sns.palplot(sns.cubehelix_palette(n_colors=8,start=1.7, rot=0.2,dark=0,light=.95,reverse=True))
+
+#generic seaborn plots:
+tips=sns.load_dataset("tips")
+sns.stripplot(x="day",y="total_bill",data=tips,color='g')
+
+iris=sns.load_dataset("iris")
+sns.boxplot(x='species',y='petal_length',data=iris,palette='cividis')

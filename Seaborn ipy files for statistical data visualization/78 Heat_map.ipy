@@ -1,0 +1,30 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+uniform_data=np.random.rand(10,12)
+sns.heatmap(uniform_data)
+
+x=np.array([[1,2,3,4],[2,3,4,1],[5,4,2,1],[6,7,8,5]])
+sns.heatmap(x)
+print(x)
+# wide format
+
+df=pd.DataFrame(np.random.random((5,5)),columns=['a','b','c','d','e'])
+p1=sns.heatmap(df)
+
+# heatmap colors
+
+corr=df.corr()
+ax1=sns.heatmap(corr,cbar=0,linewidth=2,vmax=1,vmin=0,square=True,cmap='Blues')
+plt.show()
+
+#heatmap data
+sns.set()
+flights=sns.load_dataset("flights")
+flights=flights.pivot("month","year","passengers")
+ax=sns.heatmap(flights)
+plt.title("Heatmap Flight Data")
+plt.show()
