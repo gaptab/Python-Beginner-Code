@@ -1,0 +1,9 @@
+http://en.wikipedia.org
+http://ja.wikipedia.org
+http://es.wikipedia.org
+http://ru.wikipedia.org
+http://fr.wikipedia.org
+http://de.wikipedia.org
+http://zh.wikipedia.org
+http://fa.wikipedia.org
+http://ja.wikipedia.org

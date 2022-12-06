@@ -1,0 +1,1 @@
+['//en.wikipedia.org/', '//ja.wikipedia.org/', '//es.wikipedia.org/', '//ru.wikipedia.org/', '//fr.wikipedia.org/', '//de.wikipedia.org/', '//it.wikipedia.org/', '//zh.wikipedia.org/', '//fa.wikipedia.org/', '//pt.wikipedia.org/']
